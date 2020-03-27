@@ -36,6 +36,19 @@ email()
          echo "INVALID EMAIL"
      fi
 }
+mobileNumber()
+{
+   echo "Enter your mobile number"
+   read mobileno
+   mobile="^[0-9]{2}[[:space:]][0-9]{10}$"
+     if [[ $mobileno =~ $mobile ]]
+     then
+         echo "Your mobile number is valid"
+     else
+         echo "Please enter a valid mobile number"
+     fi
+}
 firstName
 lastName
 email
+mobileNumber
