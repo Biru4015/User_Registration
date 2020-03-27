@@ -52,8 +52,20 @@ password1()
 {
    echo "Enter your password"
    read password
-   passid="^[0-9a-zA-Z]{8,}$"
-     if [[ $password =~ $passid ]]
+   passid1="^[0-9a-zA-Z]{8,}$"
+     if [[ $password =~ $passid1 ]]
+     then
+         echo "Your entered password is valid"
+     else
+         echo "Please enter a valid password"
+     fi
+}
+password2()
+{
+   echo "Enter your password"
+   read password
+   passid2="^(?=.*?[A-Z]+)([A-Za-z0-9]){8,}$"
+     if [[ $password =~ $passid2 ]]
      then
          echo "Your entered password is valid"
      else
@@ -65,3 +77,4 @@ lastName
 email
 mobileNumber
 password1
+password2
