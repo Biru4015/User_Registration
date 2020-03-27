@@ -72,9 +72,23 @@ password2()
          echo "Please enter a valid password"
      fi
 }
+password3()
+{
+ echo "Enter your password"
+   read password
+   passid2="^(?=.*?[A-Z]+)(?=.*?[0-9]+)([A-Za-z0-9]){8,}$"
+     if [[ $password =~ $passid2 ]]
+     then
+         echo "Your entered password is valid"
+     else
+         echo "Please enter a valid password"
+     fi
+
+}
 firstName
 lastName
 email
 mobileNumber
 password1
 password2
+password3
