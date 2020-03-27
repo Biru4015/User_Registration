@@ -48,7 +48,20 @@ mobileNumber()
          echo "Please enter a valid mobile number"
      fi
 }
+password1()
+{
+   echo "Enter your password"
+   read password
+   passid="^[0-9a-zA-Z]{8,}$"
+     if [[ $password =~ $passid ]]
+     then
+         echo "Your entered password is valid"
+     else
+         echo "Please enter a valid password"
+     fi
+}
 firstName
 lastName
 email
 mobileNumber
+password1
