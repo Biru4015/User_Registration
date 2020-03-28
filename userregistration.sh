@@ -89,7 +89,7 @@ password4()
 {
    echo "Enter your password"
    read password
-   passid4="^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$"
+   passid4="^(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*[<>`])([^.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\]*)[.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\](?1)$"
      if [[ $password =~ $passid4 ]]
      then
          echo "Your entered password is valid"
