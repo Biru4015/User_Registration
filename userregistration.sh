@@ -1,6 +1,6 @@
 #! /bin/bash
 shopt -s extglob
-firstName()
+firstNameLastName()
 {
    echo "Enter your first name:"
    read firstname
@@ -11,9 +11,6 @@ firstName()
      else
          echo "First name is not valid"
      fi
-}
-lastName()
-{
    echo -e "Enter your last name:\c"
    read lastname
    lname="^([A-Z])([a-z]{2,})$"
@@ -98,8 +95,7 @@ password4()
      fi
 
 }
-firstName
-lastName
+firstNameLastName
 email
 mobileNumber
 password1
