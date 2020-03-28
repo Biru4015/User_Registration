@@ -74,10 +74,23 @@ password2()
 }
 password3()
 {
- echo "Enter your password"
+   echo "Enter your password"
    read password
-   passid2="^(?=.*?[A-Z]+)(?=.*?[0-9]+)([A-Za-z0-9]){8,}$"
-     if [[ $password =~ $passid2 ]]
+   passid3="^(?=.*?[A-Z]+)(?=.*?[0-9]+)([A-Za-z0-9]){8,}$"
+     if [[ $password =~ $passid3 ]]
+     then
+         echo "Your entered password is valid"
+     else
+         echo "Please enter a valid password"
+     fi
+
+}
+password4()
+{
+   echo "Enter your password"
+   read password
+   passid4="^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$"
+     if [[ $password =~ $passid4 ]]
      then
          echo "Your entered password is valid"
      else
@@ -92,3 +105,4 @@ mobileNumber
 password1
 password2
 password3
+password4
