@@ -85,7 +85,7 @@ password3()
 password4()
 {
    echo "Enter your password"
-   read password4
+   read password
    passid4="^(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*[<>`])([^.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\]*)[.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\](?1)$"
      if [[ $password =~ $passid4 ]]
      then
